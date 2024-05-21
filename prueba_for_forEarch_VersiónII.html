@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas for y forEach</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        function Counter(array){
+            this.sum = 0;
+            this.count = array.length;
+
+            array.forEach((value) => {
+
+                this.sum +=value;
+
+            });
+        }
+
+        var obj = new Counter([2, 5 ,9]);
+        console.log(obj.count);
+        console.log(obj.sum); 
+
+
+    </script>
+</body>
+</html>

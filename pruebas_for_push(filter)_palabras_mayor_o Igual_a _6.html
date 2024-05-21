@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for,push</title>
+</head>
+<body>
+    <script>
+
+        const words = ["sprsy","elites","limit","apple","exuberant"]; // declaramos el array de palabras
+
+        const newWords = []; // creamos el array auxiliar en el que guardaremos la palabra con la condicion que queramos
+
+        for(let i=0; i< words.length;i++){  // recorremos el array de las palabras
+
+           const word= words[i]; //en cada vuelta del for guardamos en la constante word la palabra correspondiente al valor de i
+            if(word.length >= 6){  // usamos el if para hacer la comparacion si tiene mas de 6 letras haremos lo que diga dentro del if
+
+                newWords.push(word);   // usamos el metodo push para introducir la palabra al final del array nuevo
+            }
+
+        }
+
+        console.log(words);
+        console.log(newWords);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería MathJS- Función"math.evaluate()"</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.2/math.js"></script>
+
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        let expresion = '4 + 5 *2';
+        let resultado = math.evaluate(expresion);
+        console.log(resultado);
+        console.log(isFinite(42));
+        console.log(isFinite(Infinity));
+
+        console.log(isNaN(42));
+        console.log(isNaN("Hola"));
+
+        let uriCodificada ='htpps://ejemplo.com?param=%C3%A1%C3%A9%C3%AD%C3%B3%C3%BA';
+        let uriDecodificada = decodeURI(uriCodificada);
+        console.log(uriDecodificada);
+
+        let componenteCodificado = '%C3%A1%C3%A9%C3%AD%C3%B3%C3%BA';
+        let componenteDecodificado = decodeURIComponent(componenteCodificado);
+        console.log(componenteDecodificado);
+
+        let uri = 'htpps://ejemplo.com?param=áéíóú';
+        let uriCodificada1 = encodeURI(uri);
+        console.log(uriCodificada1);
+
+        let componente = 'áéíóú';
+        let componenteCodificado1 = encodeURIComponent(componente);
+        console.log(componenteCodificado1);
+
+        let texto ='Hola Clase';
+        let textoCodificado = escape(texto);
+        console.log(textoCodificado);
+
+        let textoDecodificado = unescape(textoCodificado);
+        console.log(textoDecodificado);
+
+
+
+
+    </script>
+    
+</body>
+</html>

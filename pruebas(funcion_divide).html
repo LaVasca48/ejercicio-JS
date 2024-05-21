@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función(divide)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.2/math.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+        function divide(a,b) {
+            if(b === 0 ){
+                throw new Error("El divisor no puede ser cero");
+
+            }
+            return a / b;
+
+        }
+
+        try {
+
+            divide(10,0);
+
+        }catch(error) {
+
+            console.log(error);
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
