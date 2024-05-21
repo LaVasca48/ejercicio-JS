@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 80(Eventos de teclado )consonantes</title>
+</head>
+<body>
+    <script type = "text/javascript">
+
+        function mostrarMensaje(tecla) {
+
+            const mensaje = document.getElementById("mensaje");
+            if ((tecla >= 'a' && tecla <= 'z')||(tecla >="A" && tecla <= 'Z')|| (tecla === 'ñ' || tecla ==="Ñ") || (tecla >= 0 || tecla <= 9)) {
+                var teclaPulsada = event.keyCode;
+                mensaje.innerHTML = `Pulsa la tecla :${tecla.toUpperCase()}  ${teclaPulsada}`;
+
+            }else{
+                 mensaje.innerHTML = "";
+            }
+
+        }
+
+        document.addEventListener("keydown", function(event){
+
+            const tecla = event.key;
+            mostrarMensaje(tecla);
+        })
+
+    
+
+</script>
+
+        <div id ="mensaje"></div>
+</body>
+</html>

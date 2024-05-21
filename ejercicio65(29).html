@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 65(29)Piedra, papel o tijera</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script type="text/javascript">
+        let jugador1 = 0;
+        let jugador2 = 0;
+        var resultado = document.getElementById('resultado');
+
+        while (jugador1 == jugador2) {
+            resultado.innerHTML += "Jugador1, elige una opción.<br>";
+            resultado.innerHTML += "1. Piedra<br>";
+            resultado.innerHTML += "2. Papel<br>";
+            resultado.innerHTML += "3. Tijera<br>";
+            jugador1 = parseInt(prompt("Jugador 1, elige una opción:"));
+            switch(jugador1){
+               case 1 : 
+                     resultado.innerHTML += "Jugador1 ha elegido piedra.<br>";
+                     break;
+               case 2 : 
+                     resultado.innerHTML += "Jugador1 ha elegido papel.<br>";
+                     break;
+               case 3 : 
+                     resultado.innerHTML += "Jugador1 ha elegido tijeras.<br>";
+                     break;
+            }
+
+            resultado.innerHTML += "Jugador2, elige una opción.<br>";
+            resultado.innerHTML += "1. Piedra<br>";
+            resultado.innerHTML += "2. Papel<br>";
+            resultado.innerHTML += "3. Tijera<br>";
+            jugador2 = parseInt(prompt("Jugador 2, elige una opción:"));
+
+            switch(jugador2){
+               case 1 : 
+                     resultado.innerHTML += "Jugador2 ha elegido piedra.<br>";
+                     break;
+               case 2 : 
+                     resultado.innerHTML += "Jugador2 ha elegido papel.<br>";
+                     break;
+               case 3 : 
+                     resultado.innerHTML += "Jugador2 ha elegido tijeras.<br>";
+                     break;
+            }
+
+            if (jugador1 == 1 && jugador2 == 3) {
+                resultado.innerHTML += "¡Jugador 1 gana!<br>";
+            } else if (jugador1 == 2 && jugador2 == 1) {
+                resultado.innerHTML += "¡Jugador 1 gana!<br>";
+            } else if (jugador1 == 3 && jugador2 == 2) {
+                resultado.innerHTML += "¡Jugador 1 gana!<br>";
+            } else if (jugador2 == 1 && jugador1 == 3) {
+                resultado.innerHTML += "¡Jugador 2 gana!<br>";
+            } else if (jugador2 == 2 && jugador1 == 1) {
+                resultado.innerHTML += "¡Jugador 2 gana!<br>";
+            } else if (jugador2 == 3 && jugador1 == 2) {
+                resultado.innerHTML += "¡Jugador 2 gana!<br>";
+            } else {
+                resultado.innerHTML += "¡Empate!<br>";
+            }
+        }
+    </script>
+</body>
+</html>

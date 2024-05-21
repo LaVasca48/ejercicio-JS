@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicico 68(objetos)</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    function Persona(Nombre,Apellidos,DNI,Direccion,CodigoPostal,Ciudad,Telefono,email,FechaDeNacimiento){
+
+            this.nombre = Nombre;
+            this.apellidos = Apellidos;
+            this.dni = DNI;
+            this.direccion = Direccion;
+            this.codigopostal = CodigoPostal;
+            this.ciudad = Ciudad;
+            this.telefono = Telefono;
+            this.email = email;
+            this.fecha= FechaDeNacimiento;
+            this.detalle = function() {
+
+                console.log(`Nombre: ${this.nombre}.\n\rApellidos: ${this.apellidos}.\n\rDNI: ${this.dni}. \n\rDireccion: ${this.direccion}. \n\rCodigoPostal: ${this.codigopostal}. \n\rCiudad: ${this.ciudad}. \n\rTelefono: ${this.telefono}. \n\remail: ${this.email}. \n\rFechaDeNacimiento: ${this.fecha}.`);
+
+            }
+            
+
+    }
+    var persona1 = new Persona ("Álvaro","Martinez Perez",45309353,"Collado",34521,"Soria",619567834,"alvmar@gmail.com","23/3/1994");
+            persona1.detalle();
+
+
+
+</script>
+</body>
+</html>

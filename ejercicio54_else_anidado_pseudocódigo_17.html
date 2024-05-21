@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de nota de examen</title>
+</head>
+<body>
+
+    <h1>Evalución de notas de examen</h1>
+    <p>Introduzca la nota del examen (0-20):</p>
+    <input type="number" id="nota" placeholder="Introduzca un número" min="0" max="20">
+    <button onclick="evaluarNota()">Evaluar</button>
+    <div id=""resultado></div>
+    <script type="text/javascript">
+
+        function evaluarNota() {
+
+            const nota =parseInt(documentById('nota').value);
+            let resultado = documentById('reultado');
+
+            if (nota >= 0 && nota <= 20) {
+                if (nota >= 10) {
+                    resultado.innerHTML = '¡Felicitaciones! ¡Has aprobado el examen!';   
+                }else {
+                    resultado.innerHTML = '¡Lo siento! ¡No has aprobado el examen!';
+                }
+            } else {
+                resultado.innerHTML = '¡Error! Por favor,introduzca una nota válida (o-2)';
+            }
+
+
+        }
+
+
+
+    </script>
+</body>
+</html>

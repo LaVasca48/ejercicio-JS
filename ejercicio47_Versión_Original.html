@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones while</title>
+</head>
+<body>
+    <script>
+        let suma = 0;
+        let contador = 0;
+        let numero = parseInt(prompt("Introduce un número(0 para terminar);"));
+       
+        while(numero!==0) {
+
+            suma += numero;
+            contador++;
+            numero = parseInt(prompt("Introduce otro número(0 para terminar)"));
+
+        }
+
+
+       const media = suma/ contador;
+        alert ("La suma es:"  + suma + "\nLa media es:" + media);
+        
+    </script>
+</body>
+</html>

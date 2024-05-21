@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for(suma cuadrados fijos)aleatorios</title>
+</head>
+<body>
+    <h1>Suma de cuadrados de números</h1>
+    <div id ="numeros"></div>
+    <div id ="resultado"></div>
+
+   <script>
+
+        const numbers = [];
+        const arrayLength = 5;
+
+        for (let i = 0; i < arrayLength; i++) {
+            const randomNumber = Math.floor(Math.random()*10)+1;
+            numbers.push(randomNumber);
+        }
+//randomNumber te crea números aleatorios.
+  
+        let suma = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            const number = numbers[i];
+            suma = suma + number ** 2;
+
+        }
+
+        console.log(suma);
+        document.getElementById('numeros').innerHTML ='Los números de array son: ' + numbers.join();
+        document.getElementById('resultado').innerText ='La suma de  los cuadrados es: '+ suma;
+
+
+
+
+   </script> 
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 60 (Tablas de multiplicar) original</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+			text-align: center;
+        }
+        input, button {
+            font-size: 20px; /* 1em =  16px */
+        }
+        #resultado {
+            margin-top: 20px;
+			margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Tablas de multiplicar</h1>
+    <div id="resultado"></div>
+    
+    <script type="text/javascript">
+        window.onload = function() {
+            mostrarTablas();
+        }
+
+        function mostrarTablas() {
+            let resultado = "";
+            for (let numero =1; numero <= 10; numero++) {
+                resultado += "<h3>Tabla del " + numero + "</h3>";
+
+            for (let i = 1; i <= 10; i++) {
+                resultado += numero + "x" + i +"=" + numero * i + "<br/>";
+
+            }
+
+            }
+
+            document.getElementById("resultado").innerHTML = resultado;
+
+        }
+
+    </script>
+          
+</body>
+</html>

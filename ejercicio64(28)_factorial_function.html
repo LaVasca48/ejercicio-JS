@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio63(28) factorial</title>
+   
+</head>
+<body>
+    <script type = "text/javascript">
+        function factorial(n) {
+            if(n == 0 || n == 1) {
+                return 1;
+            }else {
+                return n* factorial(n-1);  
+            }
+        }
+        let numero = 0;
+        let resultado = 0;
+
+        numero = parseInt(prompt ("Introduce número"));
+        resultado =factorial(numero);
+        document.write("El resultado es : " +resultado);
+
+    </script>
+</body>
+</html>

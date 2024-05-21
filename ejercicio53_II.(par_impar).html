@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 53 (16) II</title>
+</head>
+<body>
+    <label for="entradaNumero">Intruduzca un número:</label> 
+    <input type="number" id="entradaNumero" placeholder="Intruduzca un número" ></br></br>
+    <button onclick="verificarNumero()">Verificar</button>
+
+    <div id="resultado"></div>
+    <script type="text/javascript">
+
+        function verificarNumero() {
+
+            const numero= document.getElementById('entradaNumero').value;
+            const resultado = document.getElementById('resultado');
+        
+            if (numero % 2 == 0) {
+
+                resultado.innerHTML="El número introducido es par ";
+
+            } else {
+
+                resultado.innerHTML="El número introducido es impar ";
+            }
+
+
+
+        }
+
+
+
+
+    </script>
+</body>
+</html>

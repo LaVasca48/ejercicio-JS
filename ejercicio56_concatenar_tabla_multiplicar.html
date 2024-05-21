@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Multiplicar</title>
+</head>
+<body>
+    <h1>Mostrar Tabla de Multiplicar</h1>
+    <p>Introduzca un número</p>
+    <input type="number" id="numero" placeholder="Introduzca un número">
+    <button onclick="mostrarTabla()">Enviar</button>
+    <p id="resultado"></p>
+
+
+<script>
+
+    function mostrarTabla() {
+
+        var numero = document.getElementById("numero").value;
+        var multiplicacion;
+        let resultado= "";
+        for(var i= 1; i <= 10 ; i++) {
+
+            multiplicacion = numero * i;
+            resultado= resultado.concat(numero +"x "+ i + "=" + multiplicacion+"<br/>");
+         
+            
+        } // El resultado concat() combina dos o más cadenas de texto y devuelve una cadena
+        document.getElementById("resultado").innerHTML = resultado;
+
+    }
+
+
+</script>
+
+</body>
+</html>

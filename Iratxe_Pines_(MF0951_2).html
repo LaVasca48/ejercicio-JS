@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name= "autor" content ="Iratxe">
+    <meta name="description" content="Algorítmo de Burbuja">
+   
+
+    <title>Examen Algoritmo burbuja(Iratxe Pinés)</title>
+    <link rel="stylesheet" type="text/css" href = "Iratxe_Pines(UF1305).css">
+
+
+</head>
+<body>
+    <h1>Ordenamiento por Algorítmo de Burbuja</h1>
+    
+    <div id ="numeros"></div>
+    <div id = "solucion"></div>
+
+    <button onclick = "ordenarBurbuja(numeros)">Ordenar</button>
+    <script>
+
+    const numeros =[];
+
+
+       function numero_aleatorio (MIN,MAX){
+            const randomNumber = Math.floor(Math.random()*MAX)+MIN;
+
+            return randomNumber;
+
+        }
+       
+        function ordenarBurbuja(arrayExtra) {
+
+            var longitud = arrayExtra.length;
+
+            for (let i = 0; i < longitud -1; i ++) {
+
+                for ( let j = 0; j < longitud - i; j ++) {
+                    if (arrayExtra[j] > arrayExtra[j+1]) {
+
+                        var auxiliar;
+                        auxiliar = arrayExtra[j];
+                        arrayExtra[j] = arrayExtra[j+1];
+                        arrayExtra[j+1] = auxiliar;
+
+                  }
+
+                } 
+            }
+            document.getElementById("numeros").innerHTML = "Array ordenado: "+ numeros;
+
+        }
+
+            for (let i = 0; i < 9; i++) {
+                
+                const numero = numero_aleatorio (1,99);
+                numeros.push(numero);
+      
+        }
+
+
+        console.log("Los numeros originales son: " + numeros);
+        document.getElementById("numeros").innerHTML = "Array desordenado: "+ numeros;
+       
+
+        console.log("El resultado es: " + numeros);
+
+    </script>
+</body>
+</html>

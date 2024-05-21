@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 16 pseudocódigo</title>
+</head>
+<body>
+    <h1>Verificar si un número es positivo,negativo o 0</h1>
+    <label for="entradaNumero">Intruduzca un número:</label> 
+    <input type="number" id="entradaNumero" placeholder="Intruduzca un número" ></br></br>
+    <button onclick="VerificarNumero()">Verificar</button>
+
+    <div id="resultado"></div>
+
+
+<script type="text/javascript">
+
+    function VerificarNumero (){
+
+            var entradaNumero = document.getElementById('entradaNumero');
+            var resultado = document.getElementById('resultado');
+            var numero = parseInt(entradaNumero.value,10);
+
+            if ((numero % 2) === 0){
+
+                    resultado.innerHTML = "Es par";
+
+
+            }else{
+
+                resultado.innerHTML = "Es impar";
+
+
+             }
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

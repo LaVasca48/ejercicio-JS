@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 83</title>
+</head>
+<body>
+    <div id="resultado"></div>
+
+    <form onsubmit = "enviarFormulario(); return false;" onreset="restablecerFormulario();">
+        
+        <label for="nombre"></label>Nombre: </label><br>
+        <input type="text" id="nombre" name="nombre" onchange="cambioNombre()" onblur="validarNombre()" onfocus="resultarNombre()">
+        <br>
+        <label for="email"></label>Email: </label><br>
+        <input type="text" id="email" name="email" onchange="cambioEmail()" onblur="validarEmail()" onfocus="resultarEmail()">
+        <br>
+        <label for="contraseña"></label>Contraseña: </label><br>
+        <input type="password" id="contraseña" name="contraseña" onblur="validarContraseña()">
+
+        <br>
+        <label for="comentario"></label>Comentario: </label><br>
+        <textarea id="comentario" id="comentario" name="comentario" onselect="textoSeleccionado()"></textarea>
+        <br>
+        <label type="submit" value="Enviar"><br>
+        <input type="reset" value="Restablecer">
+    </form>
+        <script>
+
+
+            function cambioNombre() {
+
+                console.log("El nombre ha sido cambiado");
+            }
+
+            function validarNombre() {
+
+                console.log("Validando nombre");
+            }
+
+            function resultarNombre() {
+
+                console.log("Resultado nombre");
+            }
+
+            function cambioEmail() {
+
+                console.log("El email ha cambiado");
+            }
+
+            function validarEmail() {
+
+                console.log("Validar email");
+                }
+
+            function resultarEmail() {
+
+                console.log("Resaltar email");
+                }
+
+
+            function validarContraseña() {
+
+                console.log("Contraseña válida");
+                }
+
+            function textoSeleccionado() {
+
+                console.log("Texto seleccionado");
+                }
+            function enviarFormulario() {
+
+                console.log("Enviar formulario");
+                }
+            function restablecerFormulario() {
+
+                console.log("Restablecer formulario");
+}
+        </script>
+</body>
+</html>

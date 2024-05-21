@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número operaciones</title>
+</head>
+<body>
+    <script>
+
+        var numero1;
+        var numero2;
+         numero1 = prompt ("Introducir número1");
+         numero2 = prompt ("Introducir númer2");
+        var operacion;
+            operacion = prompt ("Introducir  la operación");
+       
+
+        if(operacion =="+"){
+            alert("La suma de los números es: " + (Number(numero1) + Number(numero2)));
+
+
+        } else if(operacion==="-"){
+
+            alert("La resta de los números es:" + (Number(numero1)- Number (numero2)));
+
+        } else if(operacion==="*"){
+
+            alert("La multiplicación de los números es:" + (Number(numer1) * Number(numero2)));
+
+        } else if (operacion==="/"){
+            if(Number(numero2) != 0){
+
+             alert("La división de los números es:" + (Number(numero1) / Number(numero2)));   
+
+            } else {
+                alert("No se puede dividir por 0");
+
+
+            } 
+
+
+        }else {
+
+            alert("Operación no válida");
+
+
+        }
+
+
+
+    </script>
+</body>
+</html>

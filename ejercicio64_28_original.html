@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 64(28) original desde 1</title>
+
+</head>
+<body>
+    <div>
+        <h1>Factorial - Solicitar número</h1>
+        <input type = "number" id="numero1" placeholder="Introduzca un número">
+        <button onclick="calcularFactorial()">Calcular factorial</button>
+        <div id="resultado"></div>
+    </div>
+    <script type="text/javascript">
+        function calcularFactorial() {
+            let numero = parseInt(document.getElementById("numero1").value);
+            let factorial = 1;
+            if (numero < 0) {
+                document.getElementById("resultado").innerHTML = "Error: No se puede calcularcel factorial de un número negativo";
+            }else if (numero == 0) {
+                document.getElementById("resultado").innerHTML = "El factorial es 0  es: 1";
+
+            }else {
+                for (let i = 1; i <= numero; i++) {
+                    factorial *= i; // factorial= factorial*i;
+                }
+                document.getElementById("resultado").innerHTML = "El factorial  de" + numero + "es" +factorial;
+            }
+        }
+
+    </script>
+</body>
+</html>

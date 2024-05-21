@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var suma = 0;
+        var contador = 0;
+        var numero = prompt("Introduce un número");
+        var media;
+
+        while(Number(numero) != 0) {
+
+            suma= Number(suma) + Number(numero);
+            contador = contador + 1;
+            numero = prompt("Introduce un número");
+
+        }
+
+
+        media = Number(suma) / Number(contador);
+        alert ("La suma es:"  + suma);
+        alert("La media es:" + media);
+
+    </script>
+</body>
+</html>

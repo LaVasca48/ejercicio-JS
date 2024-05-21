@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 69(crear 3 instancias basadas en la función constructora)</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        function Portatil(Marca,Modelo,Procesador,Memoria,DiscoDuro,Pantalla,TarjetaGrafica,SistemaOperativo) {
+
+            this.marca = Marca;
+            this.modelo = Modelo;
+            this.procesador = Procesador;
+            this.memoria = Memoria;
+            this.discoduro = DiscoDuro;
+            this.pantalla = Pantalla;
+            this.tarjetagrafica = TarjetaGrafica;
+            this.sistemaoperativo = SistemaOperativo;
+            this.detalle = function () {
+
+                console.log(`marca: ${this.marca} .\n\r modelo: ${this.modelo} .\n\r procesador: ${this.procesador} .\n\r memoria: ${this.memoria} .\n\r discoduro: ${this.discoduro} .\n\r tarjetagrafica: ${this.tarjetagrafica} .\n\r sistemaoperativo: ${this.sistemaoperativo}`);
+            }
+        }
+
+
+
+            var portatil1 = new Portatil("hp","740x","i7",8,"256 SSD","14","Intel graphics 820","windows 8");
+                portatil1.detalle(); 
+            var portatil2 = new Portatil("MSI","Gaming Z","i9 6ghz",16,"256 SSD","15.6","Intel graphics 520","windows 10");
+                portatil2.detalle();
+            var portatil3 = new Portatil("Acer","x889","i5",4,"1TB SSD","13","GTX 4040" ,"windows 11");
+                portatil3.detalle();
+
+                const portatiles = [portatil1,portatil2,portatil3]; 
+                const primerPortatilEliminado = portatiles.shift();
+                
+                    console.log("Primer portatil eliminado:", primerPortatilEliminado);
+                
+            
+    </script>
+</body>
+</html>

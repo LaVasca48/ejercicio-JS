@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 80(original)</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        function mostrarMensaje(codigo) {
+            const mensaje = document.getElementById("mensaje");
+            mensaje.innerHTML = `Presionaste la tecla con código ${codigo}` ;
+
+        }
+
+        document.addEventListener("keydown", function(event) {
+
+            const codigo = event.keyCode;
+            mostrarMensaje(codigo);
+        });
+
+    </script>
+    <!--Cuando se presiona una tecla del teclado, se mostrará un mensaje personalizado en un elemento >div>-->
+    
+</body>
+<div id="mensaje"></div>
+</html>

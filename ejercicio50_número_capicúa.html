@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>número capicúa</title>
+</head>
+<body>
+    <script>
+        function Capicua (numero){
+        var numeroInvertido = 0;
+        var numeroOriginal = numero;
+
+        while (numero > 0) {//131 es el número
+            ultimoDigito = numero % 10;
+            numeroInvertido = (numeroInvertido * 10) + ultimoDigito;
+            numero = Math.floor(numero/10);
+
+        } 
+
+        if (numeroOriginal == numeroInvertido) {
+
+            return true;
+
+        } else{
+
+            return false;
+
+        }
+
+
+    }
+
+        var numero = Number (prompt ("Introduce un número"));
+         
+        if (Capicua (numero)) {
+
+            document.write ("Mostrará el número  es capicúa");
+
+
+        } else {
+
+
+            document.write ("El número no es capicúa");
+
+        }
+
+
+
+    </script>
+</body>
+</html>

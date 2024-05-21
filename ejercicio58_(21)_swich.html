@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" src="css58.css">
+    <title>Ejercicio 58 (21) swich</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+			text-align: center;
+        }
+        input, button {
+            font-size: 20px; /* 1em =  16px */
+        }
+        #resultado {
+            margin-top: 20px;
+			margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="numero" placeholder="Introduzca un número" min="1" max="7">
+    <button id="boton">Mostrar el día de la semana</button>
+
+    <div id="resultado"></div>
+</body>
+
+<script type="text/javascript" >
+    document.getElementById("boton").addEventListener ("click", function() {
+        var numero = document.getElementById("numero").value;
+        var resultado = document.getElementById("resultado");
+        var día;
+        switch (parseInt(numero)) {
+            case 1:
+                día = "Lunes";
+                break;
+
+            case 2:
+                día = "Martes";
+                break;
+            case 3:
+                día = "Miércoles";
+                break;
+            case 4:
+                día = "Jueves";
+                break;
+                
+            case 5:
+                día = "Viernes";
+                break;
+                    
+             case 6:
+                día = "Sabado";
+                break;
+                 
+            case 7:
+                día = "Domingo";
+                break;
+
+           default: 
+                    
+                día = "El número introduciod no es válido.";
+
+
+                
+        }
+
+        resultado.innerHTML = día;
+
+    });
+
+
+
+</script>
+
+</html>

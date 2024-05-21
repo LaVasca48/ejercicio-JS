@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map y reloaded(Versión V)tarifas</title>
+</head>
+<body>
+    <script>
+        
+
+        let pedidosAmazon = [
+            {
+
+            nombreCliente: "Bruce",
+            total:60,
+            entregado:false,
+
+            },
+       
+            {
+
+        nombreCliente: "Steve Roger",
+        total:120,
+        entregado:true,
+
+        },
+
+        {
+
+        nombreCliente: "Thor Odinson",
+        total:180,
+        entregado:false,
+
+        },
+
+        {
+
+        nombreCliente: "Tony Stark",
+        total:240,
+        entregado:true,
+
+        },
+
+        ]
+
+        console.log(pedidosAmazon);
+
+        let tarifas = pedidosAmazon.map(pedido =>{
+            return {
+                pedido,
+            impuesto : 0.19,
+
+            }
+        
+        })
+
+        console.log(tarifas);
+        console.log(pedidosAmazon);
+        
+        console.log(tarifas[0] === pedidosAmazon[0]);
+        console.log(tarifas[1] === pedidosAmazon[1]);
+        console.log(tarifas[2] === pedidosAmazon[2]);
+        console.log(tarifas[3] === pedidosAmazon[3]);
+
+    </script>
+</body>
+</html>

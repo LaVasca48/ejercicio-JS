@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar arrays mayor a 150</title>
+</head>
+<body>
+    <script>
+        const orders= [
+            {
+        
+            customerName:"Nicolas",
+            total:60,
+            delivered:true,
+        
+             },
+
+             {
+        
+            customerName:"Zulema",
+            total:120,
+            delivered:false,
+    
+             },
+            {
+        
+        customerName:"Santiago",
+        total:180,
+        delivered:true,
+    
+         },
+         {
+        
+        customerName:"Valemtina",
+        total:240,
+        delivered:true,
+    
+         },
+
+        ];
+
+         const newOrder = orders.filter(order => order.total >160);
+         console.log(newOrder);
+         
+    
+    </script>
+</body>
+</html>

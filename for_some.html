@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For y some(comprobar cual es par)</title>
+</head>
+<body>
+    <script>
+
+        const numbers = [1,2,3,5];
+
+        let respuesta = false;
+
+        for(let i=0; i < numbers.length; i++){
+
+            const element = numbers[i];
+            if (element % 2 === 0){
+                respuesta = true;
+                break;
+
+
+            }
+
+        }
+
+        console.log(respuesta);
+
+
+    </script>
+</body>
+</html>

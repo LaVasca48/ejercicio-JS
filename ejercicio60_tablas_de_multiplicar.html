@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejerccio60(tablas de multiplicar)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+			text-align: center;
+        }
+        input, button {
+            font-size: 20px; /* 1em =  16px */
+        }
+        #resultado {
+            margin-top: 20px;
+			margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tablas de Multiplicar</h1>
+    <button onclick="tablasMultiplicar()">Verificar</button>
+    <div id ="resultado"></div>
+    
+    <script type="text/javascript">
+    function tablasMultiplicar(){
+        const resultado = document.getElementById("resultado");
+
+            for(var i= 1; i <= 10;i ++ ){
+                resultado.innerHTML =resultado.innerHTML + "Tabla de multiplicar" + i + "<br>";//+ i indica el valor de i en cada vuelta.
+                 for( var j= 0 ;j <= 10; j ++){
+                     var multiplicar = i * j ;//calcula el resultado.
+                     resultado.innerHTML = resultado.innerHTML + (i + "x" + j + "=" + multiplicar +"<br>");
+
+            } 
+        }
+
+    }
+</script>
+</body>
+</html>

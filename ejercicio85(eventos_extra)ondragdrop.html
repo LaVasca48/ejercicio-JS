@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 85(evento extra ondragdrop)</title>
+</head>
+    <style>
+        
+        #drag {
+
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        #drop {
+
+            width: 200px;
+            height: 200px;
+            background-color:purple;
+        }
+
+
+    </style>
+<body>
+  
+    <div id="drag" draggable="true">¡Arrasrtrame!</div>
+    <div id="drop">¡Suéltame aqui!</div>
+
+    <script type ="text/javascript">
+        const drag = document.getElementById("drag");
+        const drop = document.getElementById("drop");
+
+        function dragStart(event) {
+
+            event.dataTransfer.setData("text/plain", event.target.id);
+        }
+        function dragOver(event) {
+
+            event.preventDefault();
+        }
+
+        function dropHandler(event) {
+
+            event.prevntDefault();
+
+            const data = event.dataTransfer.getData("text/plain");
+            const draggedElement = document.getElementById(data);
+
+            event.targer.appendChild(draggedElement);
+            draggedElement.style.display = "name";
+
+        }
+
+        drag.addEventListener("dragstart", dragStart);
+        drag.addEventListener("dragover", dragOver);
+        drag.addEventListener("drophandler", dropHandler);
+
+    </script>
+</body>
+</html>

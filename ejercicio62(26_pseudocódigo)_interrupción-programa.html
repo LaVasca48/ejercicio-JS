@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 62(26 de pseudocódigo) Interrupción</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+			text-align: center;
+        }
+        input, button {
+            font-size: 20px; /* 1em =  16px */
+        }
+        #resultado {
+            margin-top: 20px;
+			margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+   
+    
+        <h1>Introduce un número</h1> 
+        <label for = "numero1">Numero 1</label>
+        <input type = "number" id="numero1"><br/><br/>
+        <button onclick="calcularDoble()">Calcular el doble</button>
+        <div id = "resultado"></div>
+    <script>
+        function calcularDoble() {
+        const numero =parseInt(document.getElementById("numero1").value);
+        const resultado = document.getElementById("resultado");
+
+
+            if (numero < 0){
+                resultado.innerHTML ="Se ha interrumpido el ciclo de repetición";
+                return;
+
+             }else if (numero === 0) {
+                    resultado.innerHTML = "El programa ha finalizado";
+                    return;
+
+            }else {
+                    let doble = numero * 2;
+                    resultado.innerHTML = "El doble de " + numero + "es" + doble;
+
+                }
+               
+        }
+    
+
+ 
+
+    </script>
+
+
+</body>
+</html>

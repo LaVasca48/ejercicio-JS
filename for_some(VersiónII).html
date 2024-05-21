@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For y some(versión II)busca los números pares</title>
+        
+        <body>
+            <script>
+        
+                const numbers = [1,2,3,4];
+        
+                let respuesta = false;
+                let numeroPar = null;
+        
+                for(let i=0; i < numbers.length; i++){
+        
+                    const element = numbers[i];
+                    if (element % 2 === 0){
+                        respuesta = true;
+                        numeroPar = element;
+
+                        console.log('numero par',numeroPar);
+        
+        
+                    }
+        
+                }
+        
+                console.log('Respuesta', respuesta);
+        
+        
+            </script>
+        </body>
+        </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 65(29)Piedra, papel o tijera</title>
+</head>
+<body>
+    <div id="output"></div>
+    <form id="gameForm">
+        <p>Jugador 1, elige una opción:</p>
+        <select id="jugador1Select">
+            <option value="1">Piedra</option>
+            <option value="2">Papel</option>
+            <option value="3">Tijera</option>
+        </select>
+        <br>
+        <p>Jugador 2, elige una opción:</p>
+        <select id="jugador2Select">
+            <option value="1">Piedra</option>
+            <option value="2">Papel</option>
+            <option value="3">Tijera</option>
+        </select>
+        <br>
+        <input type="submit" value="Jugar">
+    </form>
+
+    <script type="text/javascript">
+        const gameForm = document.getElementById('gameForm');
+        const jugador1Select = document.getElementById('jugador1Select');
+        const jugador2Select = document.getElementById('jugador2Select');
+        const outputDiv = document.getElementById('output');
+
+        gameForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe y recargue la página
+
+            const jugador1 = parseInt(jugador1Select.value);
+            const jugador2 = parseInt(jugador2Select.value);
+
+            outputDiv.innerHTML = ""; // Limpiar el div de salida antes de mostrar los resultados
+
+            outputDiv.innerHTML += "Jugador 1 elige: " + jugadorName(jugador1) + "<br>";
+            outputDiv.innerHTML += "Jugador 2 elige: " + jugadorName(jugador2) + "<br>";
+
+            if (jugador1 === jugador2) {
+                outputDiv.innerHTML += "¡Empate!<br>";
+            } else if (
+                (jugador1 === 1 && jugador2 === 3) ||
+                (jugador1 === 2 && jugador2 === 1) ||
+                (jugador1 === 3 && jugador2 === 2)
+            ) {
+                outputDiv.innerHTML += "¡Jugador 1 gana!<br>";
+            } else {
+                outputDiv.innerHTML += "¡Jugador 2 gana!<br>";
+            }
+        });
+
+        function jugadorName(jugador) {
+            switch (jugador) {
+                case 1:
+                    return "Piedra";
+                case 2:
+                    return "Papel";
+                case 3:
+                    return "Tijera";
+                default:
+                    return "Opción inválida";
+            }
+        }
+    </script>
+</body>
+</html>
