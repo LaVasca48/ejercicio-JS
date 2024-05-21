@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 77(Eventos de documentos)</title>
+</head>
+<body>
+    <script type = text/javascript>
+        window.onload = function() {
+
+            alert("¡La página web ha cargado correctamente!");
+        }
+        window.onbeforenload = function () {
+
+            return "¿Estás seguro de que quieres salir? ";
+        }
+        window.onumload = function () {
+            alert("Lapágina web se está descargando");
+            
+        }
+
+        function despedirse () {
+
+            alert("¡Hasta la próxima visita!");
+            window.close();//Permite cerrar la ventana del navegador web al hacer clic en el botón "Despedirse".
+        }
+
+        
+    </script>
+    <h1>Bienvenido a la página web</h1>
+    <button onclick ="despedirse ()">Despedirse</button>
+    <div id ="contenedor"></div>
+    
+</body>
+</html>
