@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejerccici75(every)</title>
+</head>
+<body>
+    <script>
+
+        const numbers =[1,30,41,29,10,13];
+
+        let respuesta = true;
+        let valorIncumplido = null;
+
+        for(let i = 0;i < numbers.length;i++){
+
+            const element = numbers[i];
+            if (element > 40){
+
+                respuesta = false;
+                valorIncumplido = element;
+                break;
+
+            }
+        }
+
+        console.log(respuesta);
+        console.log(valorIncumplido);
+
+
+    </script>
+</body>
+</html>

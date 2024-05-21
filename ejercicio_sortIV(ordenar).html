@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort IV(ordenar)</title>
+</head>
+<body>
+    <script>
+
+        const orders = [
+            {
+            costumerName:"Zulema",
+            total:40,
+            delivered:false,
+
+        },
+
+        {
+            costumerName:"Santiago",
+            total:120,
+            delivered:true,
+
+        },
+       
+        {
+            costumerName:"Valentina",
+            total:180,
+            delivered:false,
+
+        },
+        {
+            costumerName:"Mei",
+            total:240,
+            delivered:true,
+
+        },
+
+
+    ];
+
+    orders.sort((a,b) => b.total -a.total);
+
+    console.log(orders);
+    </script>
+    
+</body>
+</html>

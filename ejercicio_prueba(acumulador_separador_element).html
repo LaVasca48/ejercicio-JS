@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acumulador,separador, element</title>
+</head>
+<body>
+    <script>
+        const elements = ["hola",null,"como","estas"];
+        let acumulator = "";
+        const separator = "/";
+        for(let i = 0;i<elements.length;i++){
+            const element = elements[i] ?? "";
+            if(i !== elements.length-1){
+
+                acumulator += element + separator;
+            }else{
+
+                acumulator += element;
+            }
+
+        }
+        console.log(acumulator);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio includes(string) cadenas</title>
+</head>
+<body>
+    <script>
+
+        const saludo = "Hola mundo";
+        function includesWithNegativeIndex(string,searchValue,index = 0){
+            if(index < 0){
+
+                index = string.length + index;
+            }
+
+            return string.includes(searchValue,index);
+        }
+
+        console.log(includesWithNegativeIndex(saludo,"Hola"));
+        console.log(includesWithNegativeIndex(saludo,"hola"));
+        console.log(includesWithNegativeIndex(saludo," "));
+        console.log(includesWithNegativeIndex(saludo,"mundo"));
+        console.log(includesWithNegativeIndex(saludo,"Mundo"));
+        console.log(includesWithNegativeIndex(saludo,"Hola",0));
+        console.log(includesWithNegativeIndex(saludo," ",4));
+        console.log(includesWithNegativeIndex(saludo,"mundo",5));
+        console.log(includesWithNegativeIndex(saludo,"Hola",1));
+        console.log(includesWithNegativeIndex(saludo,"Hola",6));
+        console.log(includesWithNegativeIndex(saludo,"Hola",-10));
+        console.log(includesWithNegativeIndex(saludo,"Hola",-5));
+        console.log(includesWithNegativeIndex(saludo,"Hola",-9));
+        console.log(includesWithNegativeIndex(saludo,"Hola",-4));
+       
+
+    </script>
+</body>
+</html>

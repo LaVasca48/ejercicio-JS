@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio includes(string) arrays</title>
+</head>
+<body>
+    <script>
+
+        const frutas = ["manzana","pera","piña","uva"];
+        function includesWithNegativeIndex(array,searchValue,index = null){
+            if(index === null){
+
+                index = array.indexOf(searchValue);
+            }
+
+            if(index < 0){
+
+                index = array.length + index;
+            }
+
+            return array[index] === searchValue;
+        }
+
+        console.log(includesWithNegativeIndex(frutas,"manzana"));
+        console.log(includesWithNegativeIndex(frutas,"manzana",0));
+        console.log(includesWithNegativeIndex(frutas,"manzana",-4));
+        console.log(includesWithNegativeIndex(frutas,"pera"));
+        console.log(includesWithNegativeIndex(frutas,"pera",1));
+        console.log(includesWithNegativeIndex(frutas,"pera",-3));
+        console.log(includesWithNegativeIndex(frutas,"piña"));
+        console.log(includesWithNegativeIndex(frutas,"piña",2));
+        console.log(includesWithNegativeIndex(frutas,"piña",-2));
+        console.log(includesWithNegativeIndex(frutas,"uva"));
+        console.log(includesWithNegativeIndex(frutas,"uva",3));
+        console.log(includesWithNegativeIndex(frutas,"uva",-1));
+        
+
+    </script>
+</body>
+</html>
