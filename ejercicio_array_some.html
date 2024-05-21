@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio(array some)</title>
+</head>
+<body>
+    <script>
+        var articulos = [
+
+        {nombre:'Bici', costo:3000},
+        {nombre:'TV', costo:2500},
+        {nombre:'Libro', costo:320},
+        {nombre:'Celular', costo:10000},
+        {nombre:'Laptop', costo:20000},
+        {nombre:'Teclado', costo:500},
+        {nombre:'Audifono', costo:1700},
+        ];
+            
+        var existeArticulo = articulos.some(function(articulo){
+           return articulo.costo <= 700;
+        });
+        console.log(existeArticulo);
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        img {
+            width: 300px;
+
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de ratón</title>
+    
+</head>
+<body>
+    <script>
+        function onClickEvent() {
+            alert("Eventos onClick");
+
+        }
+
+        function onDbClickEvent() {
+            alert("Eventos onDbClick");
+
+        }
+
+        function onMouseDownEvent() {
+            alert("Eventos onMouseDown");
+        }
+
+        function onMouseUpEvent() {
+            alert("Eventos onMouseUp");
+        }
+
+        function onMouseOverEvent() {
+            alert("Eventos onMouseOver");
+
+        }
+
+        function onMouseMoveEvent() {
+
+            alert("Eventos onMouseMove");
+        }
+        function onMouseOutEvent() {
+            alert("Eventos onMouseOut");
+        }
+    </script>
+     <img src="parqueatracciones.jpg" onclick="onClickEvent()">
+     <img src="parqueatracciones.jpg" ondblclick="onDbClickEvent()">
+     <img src="parqueatracciones.jpg" onmousedown="onMouseDownEvent()"onmousemove ="onMouseMoveEvent()"onmouseup = "onMouseUpEvent()">
+     <img src="parqueatracciones.jpg" onmouseout="onMouseOutEvent()"onmouseover = "onMouseOverEvent()">
+     
+</body>
+</html>
