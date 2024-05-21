@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 66(32) array</title>
+</head>
+<body>
+    <script>
+        let nombres = ["Alisson","Álvaro","Felix","Iratxe","Javier","María","Mei","Orlando","Valery","Yuri","Alejandro"];
+
+        for (let i = 0; i < nombres.length; i++) {
+            document.write("Nombre: " + nombres[i] + "<br>");
+        }
+            document.write("<br><br>");
+            nombres[11] = nombres[3];
+            nombres[3] = nombres[6];
+            nombres[6] = nombres[11];
+            nombres[11] = "";
+
+         for (let i = 0; i < nombres.length-1; i++) {
+            document.write("Nombre: " + nombres[i] + "<br>");
+        } 
+    </script>
+    
+</body>
+</html>
